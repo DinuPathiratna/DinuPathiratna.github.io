@@ -1,35 +1,39 @@
 <style>
-    div {
-        width: 120px;
-        height: 120px;
-        background-color: lightgreen;
-        animation-name: anim-1;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-    }
+.outer {
+    margin: 30px;
+    width: 120px;
+    height: 120px;
+    background-color: lightgreen;
+    position: relative;
+    animation: anim-1 4s infinite;
+}
+
+.inner {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(96, 169, 84);
+    animation-direction: reverse;
+    position: relative;
+    animation: anim-2 4s infinite;
+}
 
 @keyframes anim-1 {
-  0% {border-top-left-radius: 0px;
-      border-top-left-radius: 50px}
+  0%   { border-radius: 50px 0 0 0; }
+  25%  { border-radius: 0 0 0 50px; }
+  50%  { border-radius: 0 0 50px 0; }
+  75%  { border-radius: 0 50px 0 0; }
+  100% { border-radius: 50px 0 0 0; }
+}
 
-  25% {border-bottom-left-radius: 0px;
-       border-bottom-left-radius: 50px}
-
-  50% {border-bottom-right-radius: 0px;
-       border-bottom-right-radius: 50px}
-
-  100% {border-top-right-radius: 0px;
-       border-top-right-radius: 50px}
+@keyframes anim-2 {
+  0%   { border-radius: 50px 0 0 0; top: 0px; left: 0px; }
+  25%  { border-radius: 0 0 0 50px; bottom: 0px; left: 0px; top: 90px; }
+  50%  { border-radius: 0 0 50px 0; bottom: 0px; right: 0px; top: 90px; left: 90px; }
+  75%  { border-radius: 0 50px 0 0; top: 0; right: 0; bottom: 90px ; left: 90px; }
+  100% { border-radius: 50px 0 0 0; top: 0; left: 0; }
 }
 </style>
 
-<div> </div>
-
-
-
-<!--.smallbox {
-        width: 20px;
-        height: 20px;
-        background-color: rgb(56, 149, 56);
-        position: relative;
-    }-->
+<div class="outer">
+  <div class="inner"></div>
+</div>
