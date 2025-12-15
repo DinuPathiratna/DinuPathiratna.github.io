@@ -1,0 +1,59 @@
+<body>
+    <div class="h1">heading</div>
+    <div class ='list'>
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+    <div class="other">other</div>
+    <div class="content">content</div>
+</body>
+<style>
+    .h1 {
+        background-color: rgb(236, 124, 107);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+    .list {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .one {
+        background-color: rgb(193, 164, 111);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+    .two {
+        background-color: rgb(195, 207, 116);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+    .three {
+        background-color: rgb(123, 209, 113);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+    .other {
+        background-color: rgb(119, 164, 228);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+    .content {
+        background-color: rgb(87, 216, 203);
+        text-align: center;
+        font-size: 25px;
+        flex: 30%;
+    }
+
+     @media (max-width: 950px) {
+        .list {
+            flex-direction: column;
+        } 
+    }
+</style>
